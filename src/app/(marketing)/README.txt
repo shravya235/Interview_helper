@@ -1,0 +1,1 @@
+You can group future marketing pages under this segment (e.g., pricing, blog).
