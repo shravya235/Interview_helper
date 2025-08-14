@@ -1,3 +1,4 @@
+'use client';
 import React, { useState, useEffect } from 'react';
 import { User, Building, Calendar, Code, Link, Github, Linkedin, Twitter, FileText, Send, CheckCircle, ArrowRight, ArrowLeft, Sparkles, Target, Clock, Zap } from 'lucide-react';
 
