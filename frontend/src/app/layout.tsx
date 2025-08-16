@@ -1,7 +1,7 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Widecanvas Clone',
+  title: 'InterView Helper',
   description: 'Draw, Speak, and Code Your App to Life',
 }
 
