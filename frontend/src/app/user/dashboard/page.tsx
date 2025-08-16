@@ -1,9 +1,10 @@
 import React from 'react'
+import UserDashboard from '@/components/Dashboard/Code'
 
-function page() {
+export default function page() {
   return (
-    <div>page</div>
+    <div>
+      <UserDashboard/>
+    </div>
   )
 }
-
-export default page
