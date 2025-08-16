@@ -1,15 +1,10 @@
 import React from 'react';
 import { X, Github, Linkedin } from 'lucide-react';
 
-export default function InterviewPrepDashboard({ onClose }) {
+export default function InterviewPrepDashboard() {
   return (
     <div className="dashboard-container">
       {/* Close button */}
-      <div style={{ display: "flex", justifyContent: "flex-end" }}>
-        <button className="dashboard-close-btn" onClick={onClose}>
-          <X size={16} />
-        </button>
-      </div>
 
       {/* Header with buttons */}
       <div className="dashboard-header">
