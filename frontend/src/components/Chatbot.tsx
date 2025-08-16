@@ -4,6 +4,12 @@ import { useState } from "react";
 import { MessageCircle, Send } from "lucide-react";
 
 const predefinedResponses: Record<string, string> = {
+  "hello": "Hi! How can I assist you today?",
+  "interview": "I can help you prepare for interviews by providing tips, common questions, and company-specific insights. What would you like to know?",
+  "resume": "Make sure your resume is tailored to the job description. Highlight relevant skills, experiences, and achievements. Keep it concise and error-free.",
+  "tips": "Here are some general interview tips: research the company, practice common questions, dress appropriately, and prepare questions to ask the interviewer. Also, practice your body language and communication skills.",
+  "common questions": "Common interview questions include: 'Tell me about yourself', 'What are your strengths and weaknesses?', 'Why do you want to work here?', and 'Describe a challenge you faced and how you overcame it.'",
+  "mock interview": "Mock interviews are a great way to practice. You can do them with a friend or use online platforms. Focus on answering questions clearly and confidently, and get feedback on your performance.",
   "technical": "For technical interviews, focus on data structures, algorithms, and practice coding problems on platforms like LeetCode. Review computer science fundamentals and practice whiteboarding.",
   "google": "Google typically asks algorithmic questions, system design problems, and behavioral questions using the STAR method. Expect 4-5 rounds including phone screens and on-site interviews.",
   "amazon": "Amazon uses the Leadership Principles heavily. Prepare stories that demonstrate customer obsession, ownership, and innovation. Expect behavioral questions and technical assessments.",
