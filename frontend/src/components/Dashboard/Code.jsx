@@ -3,7 +3,7 @@ import Header from "./DashboardHeader";
 import ProfileCard from "./ProfileCard";
 import UsageCard from "./UsageCard";
 import SessionsTable from "./SessionTable";
-import SettingsPage from "./SettingsPage";
+import SettingsPage from "../Settings/SettingsPage";
 
 export default function InterviewPrepDashboard() {
   const [showSettings, setShowSettings] = useState(false);
