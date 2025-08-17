@@ -2,12 +2,12 @@ import React from "react";
 
 export default function SettingsPage({ onBack }) {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-purple-200 p-6">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-gray-800">Settings</h2>
         <button
           onClick={onBack}
-          className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+          className="px-4 py-2 bg-black text-white rounded-lg hover:bg-slate-800 transition-colors"
         >
           Back
         </button>
