@@ -1,8 +1,8 @@
 "use client";
 
 import Box from "@/components/landing/UI/Box";
-import Modal from "@/components/landing/Modal";
-import Signup from "@/components/landing/Signup";
+import Modal from "@/components/Auth/Modal";
+import Signup from "@/components/Auth/Signup";
 import { useState } from "react";
 
 export default function Home() {
