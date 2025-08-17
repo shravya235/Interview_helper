@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sess-001",
+    "company": "Google",
+    "role": "Software Engineer Intern",
+    "date": "2025-08-10",
+    "status": "Completed"
+  },
+  {
+    "id": "sess-002",
+    "company": "Meta",
+    "role": "Frontend Developer",
+    "date": "2025-08-15",
+    "status": "Upcoming"
+  },
+  {
+    "id": "sess-003",
+    "company": "Amazon",
+    "role": "Backend Engineer",
+    "date": "2025-08-20",
+    "status": "In Progress"
+  },
+  {
+    "id": "sess-004",
+    "company": "Microsoft",
+    "role": "Full Stack Developer",
+    "date": "2025-08-25",
+    "status": "Completed"
+  }
+]
