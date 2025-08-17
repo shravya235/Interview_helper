@@ -1,7 +1,7 @@
-import Header from "@/app/landing/Header";
-import Box from "@/app/landing/Box";
-import FeatureCard from "@/app/landing/FeatureCard";
-import PricingCard from "@/app/landing/PricingCard";
+import Header from "@/components/landing/Header";
+import Box from "@/components/landing/Box";
+import FeatureCard from "@/components/landing/FeatureCard";
+import PricingCard from "@/components/landing/PricingCard";
 import Image from "next/image";
 
 
@@ -14,33 +14,30 @@ export default function LandingPage() {
             <Header />
 
             <section
-                id="home"
-                className="h-[50vh] flex items-center justify-center mt-16"
+              id="home"
+               className="h-[50vh] flex items-center justify-center mt-16"
             ><Box>
-                    <div className="bg-white p-8 rounded-xl shadow-xl flex flex-col items-center gap-4 transform -translate-y-6">
-                        {/* Catchy bold sentences with emoji */}
-
-                        <h2 className="text-3xl font-extrabold">
-                            🚀 Ace Your Interviews with Confidence!
-                        </h2>
-                        {/* Subheading highlighting AI personalization */}
-                        <p className="text-lg font-semibold text-center">
-                            Our AI-powered platform creates a <span className="text-pink-500 font-bold">custom interview plan</span> just for you!
-                            Answer a few questions and get personalized tips, practice questions, and strategies 💡✨
-                        </p>
-                        {/* Extra catchy line */}
-                        <p className="text-md text-gray-600">
-                            Be prepared, stay confident, and land your dream job faster! 🎯
-                        </p>
-                        {/* Call-to-action button */}
-                        <button className="mt-6 px-8 py-4 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition">
-                            Explore Now
-                        </button>
-                    </div>
+              <div className="bg-white p-8 rounded-xl shadow-xl flex flex-col items-center gap-4 transform -translate-y-6">
+                    {/* Catchy bold sentences with emoji */}
+                    <h2 className="text-3xl font-extrabold">
+                        🚀 Ace Your Interviews with Confidence!
+                    </h2>
+                    {/* Subheading highlighting AI personalization */}
+                    <p className="text-lg font-semibold text-center">
+                        Our AI-powered platform creates a <span className="text-pink-500 font-bold">custom interview plan</span> just for you!
+                        Answer a few questions and get personalized tips, practice questions, and strategies 💡✨
+                    </p>
+                    {/* Extra catchy line */}
+                    <p className="text-md text-gray-600">
+                        Be prepared, stay confident, and land your dream job faster! 🎯
+                    </p>
+                    {/* Call-to-action button */}
+                    <button className="mt-6 px-8 py-4 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition">
+                        Explore Now
+                    </button>
+              </div>
                 </Box>
             </section>
-
-
 
             {/* Pricing Section */}
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, Github, Linkedin } from 'lucide-react';
 
-export default function InterviewPrepDashboard() {
+export default function InterviewPrepzDashboard() {
   return (
     <div className="dashboard-container">
       {/* Close button */}
