@@ -9,7 +9,7 @@ export default function Dashboard() {
   return (
     <div className="p-4 sm:p-10 flex justify-center">
       {/* Simple Card */}
-      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-white rounded-2xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow">
+      <div className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-purple-200 rounded-2xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow">
         <h2 className="text-lg sm:text-xl font-semibold">Interview Prep Dashboard</h2>
         <p className="text-gray-600 mt-2 text-sm sm:text-base">
           Practice coding, mock interviews, and performance insights all in one place.
@@ -34,7 +34,7 @@ export default function Dashboard() {
           </div>
 
           {/* Footer (floating button) */}
-          <div className="absolute bottom-4 right-4">
+          <div className="absolute bottom-4 right-4 rounded-lg shadow-[6px_6px_0px_#000000]">
             <button
               onClick={() => setOpen(false)}
               className="px-3 sm:px-4 py-2 rounded-lg border border-gray-300 
