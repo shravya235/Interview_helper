@@ -1,4 +1,5 @@
 import './globals.css';
+import { Toaster } from "sonner";
 
 export const metadata = {
   title: 'Interview Helper',
@@ -9,7 +10,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <html lang="en">
-        <body className="bg-white text-black">{children}</body>
+        <body className="bg-white text-black">
+          {children}
+          <Toaster richColors position="top-center" />
+        </body>
       </html>
     </>
   );

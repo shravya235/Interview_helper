@@ -14,8 +14,9 @@ export default function ProfileCard() {
             </div>
           </div>
           <div className="flex-1">
+          {/* const userDetails = JSON.parse(localStorage.getItem("userDetails") || "{}"); */}
             <h2 className="text-lg font-semibold text-gray-800 mb-2">
-              We did it guys
+              {userDetails.displayName || "User"}
             </h2>
             <p className="text-sm text-gray-600 leading-relaxed">
               I'm planning to do work in the same company but i dont have the

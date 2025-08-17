@@ -7,6 +7,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { googleProvider } from "@/app/firebase";
 import { FcGoogle } from "react-icons/fc";
 import { HiOutlineMail, HiLockClosed } from "react-icons/hi";
+import { toast } from "sonner";
 
 interface LoginProps {
   onToggle?: () => void;
@@ -38,11 +39,21 @@ const fields = [
         formData.password
       );
       console.log("User logged in:", userCredential.user);
-      alert("Login successful!");
+      // Store token in cookies for one day
+      const token = await userCredential.user.getIdToken();
+      document.cookie = `token=${token}; max-age=86400; path=/`;
+
+      // Store user details in local storage or state
+      const userDetails = {
+        email: userCredential.user.email,
+        displayName: userCredential.user.displayName || "User",
+      };
+      localStorage.setItem("userDetails", JSON.stringify(userDetails));
+      toast.success("Login successful!");
       setFormData({ email: "", password: "" });
     } catch (error: any) {
       console.error("Error logging in:", error.message);
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -50,10 +61,10 @@ const fields = [
     try {
       const result = await signInWithPopup(auth, googleProvider);
       console.log("Google user:", result.user);
-      alert("Google login successful!");
+      toast.success("Google login successful!");
     } catch (error: any) {
       console.error("Google login error:", error.message);
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -95,7 +106,7 @@ return (
       onClick={handleGoogleLogin}
       className="w-full flex items-center justify-center gap-2 py-2 px-4 mt-2 border border-gray-500 rounded-md shadow-sm text-sm font-medium bg-white hover:bg-gray-100"
     >
-      <FcGoogle className="w-5 h-5" />
+      <FcGoogle  />
       Sign in with Google
     </button>
 

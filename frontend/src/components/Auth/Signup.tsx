@@ -6,6 +6,7 @@ import { auth, googleProvider } from "@/app/firebase";
 import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc"; // Google icon
 import { HiOutlineMail, HiLockClosed } from "react-icons/hi"; // Example icons
+import { toast } from "sonner";
 
 export default function Signup() {
   const [showLogin, setShowLogin] = useState(false);
@@ -29,7 +30,7 @@ export default function Signup() {
     e.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
+      toast.warning("Passwords do not match");
       return;
     }
 
@@ -40,7 +41,7 @@ export default function Signup() {
         formData.password
       );
       console.log("User signed up:", userCredential.user);
-      alert("Signup successful!");
+      toast.success("Signup successful!");
       setFormData({
         email: "",
         password: "",
@@ -49,7 +50,7 @@ export default function Signup() {
       });
     } catch (error: any) {
       console.error("Error signing up:", error.message);
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
@@ -59,10 +60,10 @@ export default function Signup() {
       const result = await signInWithPopup(auth, googleProvider);
       const user = result.user;
       console.log("Google user:", user);
-      alert(`Signed up as ${user.displayName || user.email}`);
+      toast.success(`Signed up as ${user.displayName || user.email}`);
     } catch (error: any) {
       console.error("Error with Google signup:", error.message);
-      alert(error.message);
+      toast.error(error.message);
     }
   };
 
