@@ -4,6 +4,7 @@ import Chatbot from "@/components/Chatbot";
 import LandingPage from "../components/landing/LandingPage";
 import InterviewPrepDashboard from "@/components/Dashboard/Code";
 import Modal from "@/components/ui/Model";
+import Dashboard from "./user/dashboard/page";
 
 export default function Home() {
   const [open, setOpen] = useState(false);
@@ -11,10 +12,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Chatbot />
-      <LandingPage />
-
-      {/* Button to open dashboard modal */}
-      
+      <LandingPage /> 
+      <Dashboard/>     
     </main>
   );
 }

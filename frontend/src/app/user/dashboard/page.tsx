@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import InterviewPrepDashboard from '@/components/Dashboard/Code';
 import Modal from '@/components/ui/Model';
 
-export default function Page() {
+export default function Dashboard() {
   const [open, setOpen] = useState(false);
 
   return (
