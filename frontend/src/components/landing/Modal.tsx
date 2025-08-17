@@ -22,7 +22,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
         <div className="absolute inset-0 translate-x-[8px] translate-y-[8px] rounded-lg bg-black" />
 
         {/* White top card */}
-        <div className="relative rounded-lg border-2 border-black bg-white p-6 shadow-md">
+        <div className="relative rounded-lg border-2 border-black bg-[#c5a1ff] p-6 shadow-md">
           <button
             onClick={onClose}
             className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
