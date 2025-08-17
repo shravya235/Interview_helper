@@ -1,40 +1,55 @@
 import React from "react";
 
-export default function SessionTable() {
-  const sessions = [
-    { company: "Company A", role: "Role A", date: "2025-08-01" },
-    { company: "Company B", role: "Role B", date: "2025-08-02" },
-    { company: "Company C", role: "Role C", date: "2025-08-03" },
-    { company: "Company D", role: "Role D", date: "2025-08-04" },
-  ];
-
+export default function SessionsTable() {
   return (
-    <div className="bg-white border-2 border-black shadow-[4px_4px_0px_black] p-4 rounded-md">
-      <h3 className="text-lg font-bold mb-4">Recent Interview Prep Sessions</h3>
-      <table className="w-full text-sm">
-        <thead>
-          <tr className="text-left text-pink-600">
-            <th className="p-2">Company</th>
-            <th className="p-2">Role</th>
-            <th className="p-2">Date</th>
-            <th className="p-2">Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sessions.map((s, idx) => (
-            <tr key={idx} className="border-t border-gray-300">
-              <td className="p-2">{s.company}</td>
-              <td className="p-2">{s.role}</td>
-              <td className="p-2">{s.date}</td>
-              <td className="p-2">
-                <button className="border-2 border-pink-600 text-pink-600 px-3 py-1 rounded hover:bg-pink-100">
-                  View
-                </button>
-              </td>
+    <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+      <div className="p-4 border-b border-gray-200">
+        <h3 className="text-base font-medium text-gray-800">
+          Recent Interview Prep Sessions
+        </h3>
+      </div>
+
+      <div className="overflow-x-auto">
+        <table className="w-full">
+          <thead>
+            <tr className="bg-gray-50 border-b border-gray-200">
+              <th className="text-left p-4 text-sm font-medium text-red-600">
+                Company
+              </th>
+              <th className="text-left p-4 text-sm font-medium text-red-600">
+                Role
+              </th>
+              <th className="text-left p-4 text-sm font-medium text-red-600">
+                Date
+              </th>
+              <th className="text-left p-4 text-sm font-medium text-red-600">
+                Status
+              </th>
+              <th className="text-right p-4 text-sm font-medium text-red-600">
+                Actions
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {[1, 2, 3, 4].map((row) => (
+              <tr
+                key={row}
+                className="border-b border-gray-200 hover:bg-gray-50 transition-colors"
+              >
+                <td className="p-4 text-sm text-gray-600"></td>
+                <td className="p-4 text-sm text-gray-600"></td>
+                <td className="p-4 text-sm text-gray-600"></td>
+                <td className="p-4 text-sm text-gray-600"></td>
+                <td className="p-4 text-right">
+                  <button className="px-3 py-1 text-sm text-gray-600 border border-gray-300 rounded bg-white hover:bg-gray-50 transition-colors">
+                    View
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
