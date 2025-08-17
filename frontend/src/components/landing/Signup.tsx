@@ -44,7 +44,7 @@ export default function Signup() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-black focus:border-black"
+            className="mt-1 block w-full px-3 py-2  border border-gray-500 rounded-md shadow-sm focus:outline-none focus:ring-black focus:border-black"
             required
           />
         </div>
