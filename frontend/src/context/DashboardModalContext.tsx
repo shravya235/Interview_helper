@@ -18,7 +18,6 @@ export function DashboardModalProvider({ children }: { children: ReactNode }) {
   return (
     <DashboardModalContext.Provider value={{ openDashboard, closeDashboard }}>
       {children}
-
       {/* Global modal instance */}
       <DashboardModal open={open} onClose={closeDashboard} />
     </DashboardModalContext.Provider>
