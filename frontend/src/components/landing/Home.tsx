@@ -15,7 +15,7 @@ export default function Home() {
         className="h-[70vh] sm:h-[60vh] md:h-[70vh] flex items-center justify-center mt-10 px-4 sm:px-6"
       >
         <Box>
-          <div className="bg-white p-6 sm:p-8 rounded-xl shadow-xl flex flex-col items-center gap-4 transform -translate-y-6 max-w-[95vw] sm:max-w-lg md:max-w-[900px]">
+          <div className=" p-6 sm:p-8 rounded-xl shadow-xl flex flex-col items-center gap-4 transform -translate-y-6 max-w-[95vw] sm:max-w-lg md:max-w-[900px]">
             <h2 className="text-2xl sm:text-3xl md:text-3xl font-extrabold text-center">
               🚀 Ace Your Interviews with Confidence!
             </h2>

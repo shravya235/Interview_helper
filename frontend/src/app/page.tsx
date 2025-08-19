@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <LandingPage />
-      <Dashboard />
+      {/* <Dashboard /> */}
       <HelperPage />
     </main>
   );

@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
-import Link from "next/link";
 import { FaRegFileAlt, FaCog, FaChartBar } from "react-icons/fa";
+import { useDashboardModal } from "@/context/DashboardModalContext";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
+  const { openDashboard } = useDashboardModal();
 
   return (
     <>
@@ -32,34 +33,16 @@ export default function Sidebar() {
           <nav>
             <ul className="space-y-8 text-lg font-medium pl-2">
               <li>
-                <Link
-                  href="/user/history"
-                  onClick={() => setOpen(false)}
-                  className="flex gap-3 items-center text-[#5B4DA7] hover:text-[#7A5EEB] transition"
-                >
-                  <FaRegFileAlt className="text-[#9570F6] text-2xl" />
-                  History
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/user/settings"
-                  onClick={() => setOpen(false)}
-                  className="flex gap-3 items-center text-[#5B4DA7] hover:text-[#7A5EEB] transition"
-                >
-                  <FaCog className="text-[#80CDCC] text-2xl" />
-                  Settings
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/user/dashboard"
-                  onClick={() => setOpen(false)}
+                <button
+                  onClick={() => {
+                    openDashboard(); // 🚀 opens global modal
+                    setOpen(false);
+                  }}
                   className="flex gap-3 items-center text-[#5B4DA7] hover:text-[#7A5EEB] transition"
                 >
                   <FaChartBar className="text-[#8ACE9A] text-2xl" />
                   Dashboard
-                </Link>
+                </button>
               </li>
             </ul>
           </nav>

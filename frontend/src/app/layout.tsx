@@ -1,3 +1,4 @@
+import { DashboardModalProvider } from '@/context/DashboardModalContext';
 import './globals.css';
 import { Toaster } from "sonner";
 
@@ -12,7 +13,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <>
       <html lang="en">
         <body className="bg-white text-black">
-          {children}
+          <DashboardModalProvider>
+            {children}
+          </DashboardModalProvider>
           <Toaster richColors position="top-center" />
         </body>
       </html>
